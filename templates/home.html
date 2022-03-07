@@ -4,6 +4,7 @@
 
 {% block content %}
     <h2>Posts</h2>
+    <button><a href="{% url 'blog:add' %}">Add post</a> </button>
     {% for post in object_list %}
         <li><a href="{% url 'blog:post' post.pk %}"> {{ post.title }}</a> - {{ post.author }} </br>
             {{ post.content }} </li>
